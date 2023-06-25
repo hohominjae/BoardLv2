@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Wepick ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+  <description>
+    Ruleset applied for this project
+  </description>
+
+  <exclude-pattern>com/sparta/hanghaeblog/HanghaeBlogApplication*</exclude-pattern>
+
+  <!-- bestpractices rule -->
+  <rule ref="category/java/bestpractices.xml">
+  </rule>
+
+  <!-- codestyle rule -->
+  <rule ref="category/java/codestyle.xml">
+    <exclude name="AtLeastOneConstructor"/>
+    <exclude name="ConfusingTernary"/>
+    <exclude name="LinguisticNaming"/>
+    <exclude name="LocalVariableCouldBeFinal"/>
+    <exclude name="LongVariable"/>
+    <exclude name="MethodArgumentCouldBeFinal"/>
+    <exclude name="ShortVariable"/>
+  </rule>
+
+  <!-- design rule -->
+  <rule ref="category/java/design.xml">
+    <exclude name="DataClass"/>
+    <exclude name="LawOfDemeter"/>
+    <exclude name="SignatureDeclareThrowsException"/>
+  </rule>
+
+  <!-- documentation rule -->
+  <rule ref="category/java/documentation.xml">
+    <exclude name="CommentRequired"/>
+    <exclude name="CommentSize"/>
+  </rule>
+
+  <!-- errorprone rule -->
+  <rule ref="category/java/errorprone.xml">
+    <exclude name="BeanMembersShouldSerialize"/>
+    <exclude name="DataflowAnomalyAnalysis"/>
+  </rule>
+
+  <!-- multithreading rule -->
+  <rule ref="category/java/multithreading.xml">
+    <exclude name="UseConcurrentHashMap"/>
+  </rule>
+
+  <!-- performance rule -->
+  <rule ref="category/java/performance.xml">
+    <exclude name="AvoidInstantiatingObjectsInLoops"/>
+  </rule>
+
+  <!-- security rule -->
+  <rule ref="category/java/security.xml">
+  </rule>
+
+</ruleset>
