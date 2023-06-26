@@ -20,11 +20,11 @@ public class CommentEntity extends Timestamped {
   @Column(name = "content", nullable = false)
   private String content;
 
-  @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "post_id", referencedColumnName = "post_id")
   private PostEntity postEntity;
 
-  @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "username", referencedColumnName = "username")
   private UserEntity userEntity;
 }
